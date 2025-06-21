@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Flipping-cards/static/css/main.1917acee.css",
-    "main.js": "/Flipping-cards/static/js/main.b56b3069.js",
+    "main.css": "/Flipping-cards/static/css/main.5d4b899a.css",
+    "main.js": "/Flipping-cards/static/js/main.90174c0f.js",
     "static/media/logo.svg": "/Flipping-cards/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Flipping-cards/index.html",
-    "main.1917acee.css.map": "/Flipping-cards/static/css/main.1917acee.css.map",
-    "main.b56b3069.js.map": "/Flipping-cards/static/js/main.b56b3069.js.map"
+    "main.5d4b899a.css.map": "/Flipping-cards/static/css/main.5d4b899a.css.map",
+    "main.90174c0f.js.map": "/Flipping-cards/static/js/main.90174c0f.js.map"
   },
   "entrypoints": [
-    "static/css/main.1917acee.css",
-    "static/js/main.b56b3069.js"
+    "static/css/main.5d4b899a.css",
+    "static/js/main.90174c0f.js"
   ]
 }
