@@ -128,6 +128,7 @@ const Card = () => {
     if (newFlipped.length === 2) {
       setLockBoard(true);
     }
+    document.body.classList.add(`${currentPlayer}-turn`);
   };
 
   const handleRoomReady = ({ roomCode, players, cards, currentPlayer, scores }) => {
@@ -140,7 +141,7 @@ const Card = () => {
     const mySocketId = socket.id;
     const myIndex = players.findIndex(p => p.id === mySocketId);
     setMyColor(myIndex === 0 ? "blue" : "red");
-    document.body.classList.add(`${currentPlayer}-turn`);
+    
   };
 
   const requestRematch = () => {
