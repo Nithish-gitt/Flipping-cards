@@ -1,0 +1,230 @@
+/* Reset body */
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Game container */
+.flip-flop-game {
+  /* height: 100vh;
+  width: 100vw; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+  transition: background 0.5s ease;
+   background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Player turn backgrounds */
+.blue-turn {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+.red-turn {
+  background: linear-gradient(to right, #f77062, #fe5196);
+}
+
+/* Header */
+header {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 2rem;
+  flex: 1;
+  text-align: center;
+}
+
+/* Score display */
+.score {
+  font-size: 18px;
+  padding: 8px 16px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  font-weight: bold;
+  color: #fff;
+  min-width: 160px;
+}
+
+/* Game board */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 110px);
+  grid-gap: 14px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Card container */
+.card {
+  width: 110px;
+  height: 110px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+/* Card flip animation */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Front & back */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  border: 3px solid #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Card front - default */
+.card-front {
+  background: linear-gradient(to top left, #dfe9f3, #ffffff);
+}
+
+/* Card back - image */
+.card-back {
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* Popup overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup container */
+.popup {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  text-align: center;
+}
+
+/* Popup input */
+.popup input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Buttons */
+.popup button {
+  padding: 10px 0;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.popup button:hover {
+  background-color: #0056b3;
+}
+
+.popup button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Room input group */
+.room-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .flip-flop-game {
+    padding: 10px;
+     background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .score {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+
+  .game-board {
+    grid-template-columns: repeat(4, 80px);
+    grid-gap: 10px;
+    margin-top: 10px;
+  }
+
+  .card {
+    width: 80px;
+    height: 80px;
+  }
+
+  .popup {
+    width: 90%;
+    padding: 20px 15px;
+  }
+
+  .popup input {
+    font-size: 15px;
+  }
+
+  .popup button {
+    font-size: 15px;
+  }
+}
