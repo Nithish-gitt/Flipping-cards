@@ -228,11 +228,11 @@ header h1 {
     font-size: 15px;
   }
   /* Player turn backgrounds */
-.blue-turn {
-  background: linear-gradient(to right, #4facfe, #00f2fe);
-}
+  .blue-turn {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+  }
 
-.red-turn {
-  background: linear-gradient(to right, #f77062, #fe5196);
-}
+  .red-turn {
+    background: linear-gradient(to right, #f77062, #fe5196);
+  }
 }
