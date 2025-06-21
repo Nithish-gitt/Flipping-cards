@@ -141,7 +141,7 @@ const Card = () => {
     const mySocketId = socket.id;
     const myIndex = players.findIndex(p => p.id === mySocketId);
     setMyColor(myIndex === 0 ? "blue" : "red");
-    // document.body.classList.add(`${currentPlayer}-turn`);
+    document.body.classList.add(`${currentPlayer}-turn`);
     
   };
 
@@ -151,7 +151,6 @@ const Card = () => {
   };
 
   return (
-    <body className={`${currentPlayer}-turn`}>
     <div className={`flip-flop-game ${currentPlayer}-turn`}>
       {showPopup && <RoomPopup onRoomReady={handleRoomReady} />}
       <header>
@@ -189,7 +188,6 @@ const Card = () => {
         </div>
       )}
     </div>
-    </body>
   );
 };
 
