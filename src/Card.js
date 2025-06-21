@@ -3,7 +3,10 @@ import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import "./Card.css";
 
-const socket = io("https://flipflop-backend-8nlu.onrender.com");
+const socket = io("https://flipflop-backend-8nlu.onrender.com",{
+  transports: ["websocket"],
+  secure: true
+});
 
 const FlipCard = ({ image, isFlipped, onClick, hidden }) => (
   <div className="card" style={{ visibility: hidden ? "hidden" : "visible" }}>
